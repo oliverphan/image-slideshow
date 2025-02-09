@@ -1,0 +1,56 @@
+.slideshow-container {
+  position: relative;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  overflow: hidden;
+  height: auto;
+}
+  
+.slide {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+  
+button {
+  position: absolute;
+  top: 40%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: white;
+  background: rgba(0, 0, 0, 0.5);
+  border: none;
+  padding: 10px;
+  font-size: 32px;
+  border-radius: 50%;
+  transition: background 0.3s, transform 0.3s;
+}
+
+button:hover,
+button:focus {
+  background: rgba(0, 0, 0, 0.8);
+  transform: scale(1.1);
+  box-shadow: 0 0 0 3px rgba(100, 100, 255, 0.5);
+}
+
+button:first-of-type {
+  left: 40px;
+}
+
+button:last-of-type {
+  right: 40px;
+}
+
+button[aria-label="Previous Slide"]:focus,
+button[aria-label="Next Slide"]:focus {
+  outline: 4px solid rgba(100, 100, 255, 0.5);
+}
+
+.viewCount {
+  margin-top: 20px;
+  font-size: 1.2em;
+  color: #fff;
+}
+  
