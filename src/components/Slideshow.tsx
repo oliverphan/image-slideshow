@@ -23,18 +23,21 @@ const Slideshow = ({ images }: SlideshowProps) => {
 
   const handleNextSlide = () => {
     const newIndex = (currentIndex + 1) % images.length;
-    setCurrentIndex(newIndex);
-    updateViewCount(images[newIndex].src);
+    handleNav(newIndex)
   };
 
   const handlePrevSlide = () => {
     const newIndex = (currentIndex - 1 + images.length) % images.length;
-    setCurrentIndex(newIndex);
-    updateViewCount(images[newIndex].src);
+    handleNav(newIndex)
   };
 
+  const handleNav = (newIndex: number) => {
+    setCurrentIndex(newIndex);
+    updateViewCount(images[newIndex].src);
+  }
+
   return (
-    <div className="slideshow-container">
+    <div className="slideshowContainer">
       <div className="slideshow">
         <button onClick={handlePrevSlide} aria-label="Previous Slide">&#10094;</button>
 
@@ -45,6 +48,18 @@ const Slideshow = ({ images }: SlideshowProps) => {
         />
 
         <button onClick={handleNextSlide} aria-label="Next Slide">&#10095;</button>
+      </div>
+
+      <div className="navigationBar">
+        {images.map((_, index) => (
+          <button
+            className={`dot ${currentIndex === index ? 'active' : ''}`}
+            onClick={() => handleNav(index)}
+            key={index}
+            aria-label={`Go to slide ${index + 1}`}
+            aria-current={index === currentIndex ? "true" : "false"}
+          ></button>
+        ))}
       </div>
 
       <div className="viewCount">

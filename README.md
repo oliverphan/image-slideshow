@@ -1,13 +1,14 @@
 # Image Slideshow
 A simple, responsive image slideshow built with React and TypeScript. Check out the project [here](https://image-slideshow.vercel.app/).
 
-![preview](public/assets/slideshow.gif)
+![preview](public/assets/slideshow_v2.gif)
 
 ## Features
 
 - A responsive image slideshow with next/previous buttons
 - View count tracking for each image
 - Continuous deployment via Vercel
+- Navigation bar
 
 ## Technologies Used
 
