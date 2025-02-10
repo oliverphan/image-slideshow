@@ -26,11 +26,7 @@ A simple, responsive image slideshow built with React and TypeScript. Check out 
 
 ### Installation
 
-1. Clone the repository:
-  ```bash
-  git clone git@github.com:oliverphan/image-slideshow.git
-  cd image-slideshow
-  ```
+1. Clone the repository
 
 2. Install dependencies
   ```bash
@@ -43,7 +39,7 @@ Start the development server:
   npm run dev
   ```
 
-This will start the app on http://localhost:3000.
+This will start the app on http://localhost:5173.
 
 ### Deployment
 The project is continuously deployed to Vercel on pushes to the `main` branch.
